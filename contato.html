@@ -259,6 +259,10 @@
 				max-height: 76px;
 				max-width: 300px;
 			}
+
+			#forms-color textarea {
+				color: blue;
+			}
 		</style>
 
 		<!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -411,28 +415,29 @@
 
 							<div class="col-md-12">
 								<p style='font-size:20px;'>
-								<p>Email: <b>proj.operacaonatal@gmail.com</b></p>
+								<p><span style="font-weight: 700; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Email: <b>proj.operacaonatal@gmail.com</b></span></p>
 								</p>
 
 								<br /><br />
 
 								<form id="formao500" name="formao500" action="" method="post">
-									Nome:<br />
-									<input type="text" class="form-control" name="nome" maxlength="100" required />
+									<span style="font-weight: 700; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nome:</span><br />
+									<input type="text" class="form-control" name="nome" maxlength="100" required style="background-color: cornsilk;" />
 									<br /><br />
-									E-mail:<br />
+									<span style="font-weight: 700; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">E-mail:</span><br />
 									<input type="email" class="form-control" name="email" maxlength="100"
 										placeholder="Por favor, insira um e-mail válido para obter resposta de volta."
-										required />
+										required style="background-color:cornsilk" />
 									<br /><br />
-									Mensagem:<br />
-									<textarea class="form-control" name="msg" rows="10" required></textarea>
-
+									<span style="font-weight: 700; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Mensagem</span><br />
+									<textarea class="form-control" name="msg" rows="10" required style="background-color: cornsilk;"></textarea>
+								
 									<input type="hidden" name="formulario_contato" value=1 required />
 									<br /><br />
-
+								
 									<input type="submit" class='btn btn-primary' name="botao" value='Enviar' />
 								</form>
+								
 							</div>
 
 
