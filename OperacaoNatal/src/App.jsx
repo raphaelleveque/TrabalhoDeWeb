@@ -8,6 +8,7 @@ import Informacoes from './components/informacoes'
 import Sobre from "./components/sobre";
 import Contato from "./components/contato";
 import './App.css'
+import Login from "./components/Login";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Login",
-    element: <Informacoes/>
+    element: <Login/>
   }
 
 ]);

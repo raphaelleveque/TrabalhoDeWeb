@@ -76,7 +76,7 @@ nav .blobLog img:nth-child(3){
 .items img:nth-child(1){
     position: absolute;
     width: 1539px;
-    top: -398px;
+    top: -43vh;
     transform: rotate3d(8, -102, 8, 168deg);
     height: 859px;
 }
