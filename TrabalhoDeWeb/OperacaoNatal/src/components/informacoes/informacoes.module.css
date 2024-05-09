@@ -1,0 +1,112 @@
+.informacoes {
+    width: 65vw;
+    display: flex;
+    margin-top: 2vw;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #225b3a;
+    border: 20px solid #225b3a;
+    border-radius: 35px;
+    margin-bottom: 5vh;
+    padding: 20px;
+}
+
+.border {
+    background-color: #EC0719;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.evento {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 20px; /* Default margin-top */
+}
+
+.evento img {
+    width: 350px;
+    border-radius: 10px;
+    background-color: #EC0719;
+}
+
+.evento .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-inline: 2rem;
+    padding: 1rem;
+}
+
+.evento .conteudo h4 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.evento .conteudo article {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.conteudo button {
+    outline: none!important;
+    border: none;
+    width: 200px;
+    margin: 20px auto; /* Default margin-top */
+    padding: 10px 1rem;
+    font-family: "Comfortaa";
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background: #FFC05A;
+}
+
+@media only screen and (max-width: 1280px) {
+    .informacoes {
+        width: 90vw;
+        border-width: 10px;
+        border-radius: 15px;
+        margin-top: 220px;
+    }
+
+    .evento img {
+        width: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 1068px) {
+    .informacoes {
+        width: 90vw;
+        border-width: 10px;
+        border-radius: 15px;
+        margin-top: 200px;
+    }
+
+    .evento img {
+        width: 250px;
+    }
+
+    .evento {
+        margin-top: 20px;
+    }
+
+    .conteudo button {
+        margin-top: 20spx;
+    }
+}
+
+/* For screens smaller than 576px */
+@media only screen and (max-width: 576px) {
+    .informacoes {
+        width: 95vw;
+        border-width: 5px;
+        border-radius: 10px;
+    }
+
+    .evento img {
+        width: 200px;
+    }
+}
