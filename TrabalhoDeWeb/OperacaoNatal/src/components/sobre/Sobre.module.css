@@ -51,6 +51,11 @@
     padding: 1rem;
 }
 
+.evento ul {
+    padding-inline-start: 0;
+    margin-inline: 20px;
+}
+
 .evento ul li{
     color:black;
     font-size:1rem;

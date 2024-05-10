@@ -205,7 +205,11 @@ footer p {
 @media only screen and (max-width: 1280px) {
 
     #Conteudo .intro{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin-top: 0px;
+    }
+    #Conteudo p, #Conteudo li {
+        font-size: 1.3rem;
     }
     html {
         font-size: 10px;
