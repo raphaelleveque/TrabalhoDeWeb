@@ -196,7 +196,50 @@ footer p {
     margin: 0;
 }
 
+#Libras
+{
+    position: fixed;
+    right: 2vw;
+    top: 50vh;
+    height: 7vh;
+    filter: drop-shadow(4px 9px 10px #000);
+    transition: .4s;
+    cursor: pointer;
+    z-index: 999;
+}
 
+#Libras:hover{
+    scale: 1.1;
+}
+
+#Libras:active{
+    scale: 0.95;
+}
+footer{
+    background: #000;
+    color: #fff;
+    margin-bottom: 0;
+    font-family: "Pompiere";
+    height: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+}
+footer .acessibilidade{
+    display: flex;
+}
+footer .acessibilidade img{
+    height: 1.2rem;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.acessibilidade p {
+    cursor: pointer;
+}
+footer p{ margin: 0;}
 
 .sandwich{
     display: none;
@@ -239,15 +282,20 @@ footer p {
         width: 80vw;
     }
 
-    .nav-hidden{
+    .nav-hidden .items{
         display: none;
         margin-top: -27vh;
         margin-bottom: 20px;
     }
+
     .nav-visible{
-        display: inherit;
+        display: flex;
         margin-top: 0;
         margin-bottom: 20px;
+    }
+
+    nav .blobLog img:nth-child(3) {
+        width: 20vw;
     }
 
     .sandwich{

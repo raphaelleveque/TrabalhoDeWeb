@@ -9,6 +9,8 @@ import Home from './components/home'
 import Sobre from "./components/sobre";
 import Contribuicoes from "./components/contribuicoes";
 import './App.css'
+import libras from "./assets/visual/libras.png"
+import contrast from "./assets/visual/contraste.png"
 import Login from "./components/Login";
 
 const router = createBrowserRouter([
@@ -52,9 +54,16 @@ function App() {
       <img className="ufo" id="mascote4"src="src/visual/Floquinho (1).png" alt=""/>
       <img className="ufo" id="mascote5" src="src/visual/Bell (2).png" alt=""/> */}
 
-      <footer>
-        <p>Operação Natal ©2024</p>
-      </footer>
+    <img src={libras} id="Libras" />
+
+    <footer>
+      <p>Operação Natal ©2024</p>
+      <div className="acessibilidade">
+        <p>A+ | A-</p>
+        <img src={contrast} alt="" />
+        <p>Alto Contraste</p>
+      </div>
+    </footer>
     </>
   )
 }
