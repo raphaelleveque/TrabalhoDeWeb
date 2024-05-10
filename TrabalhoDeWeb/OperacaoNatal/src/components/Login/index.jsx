@@ -24,12 +24,12 @@ function Login() {
                   <label for="senha">Senha:</label><br />
                   <input type="password" name="senha" Maxlength="30"
                     placeholder="Digite sua senha"
-                  /><br /><br />
+                    required /><br /><br />
 
                   <input type="hidden" name="formulario_login" value={1} required />
                   <input className={Style.botao} type="submit" name="botao" value="Logar" />
                 </form>
-                <p className={Style.cadastro}>Ainda não tem uma conta? <a href="/cadastro">Cadastre-se aqui</a>.</p>
+                <p className={Style.cadastro}>Ainda não tem uma conta? <a href="">Cadastre-se aqui</a>.</p>
               </div>
             </div>
           </div>

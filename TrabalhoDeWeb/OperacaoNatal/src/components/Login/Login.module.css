@@ -1,13 +1,13 @@
 .informacoes {
-  width: 450px;
-  height: 320px;
+  width: 35vw;
+  height: 400px;
   display: flex;
   margin-top: 2vw;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
   background-color: #225b3a;
-  border: 15 px solid #225b3a;
+  border: 10px solid #225b3a;
   border-radius: 35px;
   margin-bottom: 20px;
   padding: 20px;
@@ -16,17 +16,24 @@
 
 .info {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-inline: 2rem;
+  padding: 1rem;
+  font-size: 30px;
+  margin-top: 7rem;
 }
 
 .border {
-  border: 15px solid red;
+  border: 25px solid red;
   border-radius: 25px;
   padding: 0px
 }
 
 .evento {
   background-color: #fff;
-  border-radius: 2%;
+  border-radius: 0.5%;
 }
 
 .conteudo {
@@ -44,7 +51,8 @@
   border: 15 px solid #225b3a;
   border-radius: 35px;
   height: 20px;
-  width: 270px;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .formulario .botao {
@@ -60,4 +68,39 @@
 .cadastro a {
   color: rgb(0, 140, 255);
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 1280px) {
+  .informacoes {
+    width: 35vw;
+    height: 320px;
+  }
+
+  .info {
+    font-size: 20px;
+    margin-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .informacoes {
+    width: 55vw;
+    height: 320px;
+  }
+
+  .info {
+    font-size: 20px;
+    margin-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .informacoes {
+    width: 70vw;
+  }
+
+  .info {
+    font-size: 3vw;
+    margin-top: -1rem;
+  }
 }
