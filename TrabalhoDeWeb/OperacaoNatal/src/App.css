@@ -131,9 +131,10 @@ ul>li {
     z-index: 9;
 }
 
-#Conteudo .intro {
-    margin-left: -54rem;
-    z-index: 1;
+#Conteudo .intro {  
+    margin: auto;
+    text-align: center;
+    margin-top: 120px;
 }
 
 #Conteudo h2 {
