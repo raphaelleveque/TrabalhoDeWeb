@@ -22,7 +22,13 @@
     display: flex;
     background-color: #fff;
     border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
 
+}
+
+.evento p{
+    margin: 20px;
 }
 
 .carrossel{
@@ -41,6 +47,11 @@
     justify-content: space-between;
     margin-inline: 2rem;
     padding: 1rem;
+}
+
+.evento ul li{
+    color:black;
+    font-size:1rem;
 }
 
 .evento .conteudo h4{
