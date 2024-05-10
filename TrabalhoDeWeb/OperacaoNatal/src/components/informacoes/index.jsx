@@ -11,7 +11,7 @@ function Informacoes() {
       <Header />
       <section id="Conteudo">
 
-        <div className={Style.info}>
+        <div className="intro">
           <h2>Informações</h2>
           <h3>Fique Antenado nos próximos eventos!</h3>
         </div>
