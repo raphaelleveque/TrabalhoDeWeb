@@ -55,6 +55,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    transition: 1.2s;
 }
 
 nav .blobLog {
@@ -195,7 +196,14 @@ footer p {
     margin: 0;
 }
 
+
+
+.sandwich{
+    display: none;
+}
+
 @media only screen and (max-width: 1280px) {
+
     #Conteudo .intro{
         display:none;
     }
@@ -225,6 +233,27 @@ footer p {
 @media only screen and (max-width: 1068px) {
     .items {
         width: 80vw;
+    }
+
+    .nav-hidden{
+        display: none;
+        margin-top: -27vh;
+        margin-bottom: 20px;
+    }
+    .nav-visible{
+        display: inherit;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .sandwich{
+        display: inherit;
+        width: 6vw;
+        margin: 4px;
+        cursor: pointer;
+        position: fixed;
+        right: 10px;
+        z-index: 999;
     }
 
     .items img {

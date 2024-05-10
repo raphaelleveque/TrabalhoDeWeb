@@ -3,18 +3,29 @@ import bloobClaro from '../../assets/visual/Bloob1-claro.png'
 import bloob2 from '../../assets/visual/Bloob2.png'
 import estrelas from '../../assets/visual/Estrelas.png'
 import logo from '../../assets/visual/logo-vertical-detalhes-em-branco.png'
+import menu from '../../assets/visual/menu.png'
+
 
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function Header(){
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+      setIsVisible(prevState => !prevState);
+    };
+    
     return(
-        <nav>
+        <>
+        <img src={menu} className='sandwich' onClick={toggleVisibility}/> 
+        <nav className={isVisible ? 'nav-visible' : 'nav-hidden'}>
             <div className="blobLog">
                 <img src={bloob1} alt=""/>
                 <img src={bloobClaro} alt=""/>
                 <img src={logo} alt="Logo"/>
             </div>
-            <div className="items">
+            <div className="items" >
                 <img src={bloob2} alt=""/>
                 <img src={estrelas} alt=""/>
                 <ul>
@@ -36,6 +47,7 @@ function Header(){
                 </ul>
             </div>
         </nav>
+        </>
     );
 
 }
