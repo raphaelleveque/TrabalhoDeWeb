@@ -6,7 +6,7 @@ import {
 } from "react-router-dom"
 import Informacoes from './components/informacoes'
 import Sobre from "./components/sobre";
-import Contato from "./components/contato";
+import Contribuicoes from "./components/contribuicoes";
 import './App.css'
 import Login from "./components/Login";
 
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Contribuicoes",
-    element: <Contato/>
+    element: <Contribuicoes/>
   },
   {
     path: "/Informacoes",
