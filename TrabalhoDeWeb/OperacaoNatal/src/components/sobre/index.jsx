@@ -19,9 +19,9 @@ const OperacaoNatal = () => {
 			<div className={Style.informacoes}>
 				<div className={Style.border}>
 					<div className={Style.carrossel}>
-						<img src={img1} alt=""/>
-						<img src={img2} alt=""/>
-						<img src={img3} alt=""/>
+						<img src={img1} alt="Equipe da operação natal com crianças"/>
+						<img src={img2} alt="Criança sendo maquiada por uma organizadora da Operação Natal"/>
+						<img src={img3} alt="Papai Noel com crianças"/>
 					</div>
 				</div>
 

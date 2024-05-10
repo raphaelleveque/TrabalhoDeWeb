@@ -12,7 +12,7 @@ function Header(){
             <div className="blobLog">
                 <img src={bloob1} alt=""/>
                 <img src={bloobClaro} alt=""/>
-                <img src={logo} alt=""/>
+                <img src={logo} alt="Logo"/>
             </div>
             <div className="items">
                 <img src={bloob2} alt=""/>
