@@ -10,6 +10,8 @@
     border: 20px solid #225b3a;
     border-radius: 35px;
     margin-bottom: 5vh;
+
+    text-align: justify;
 }
 
 .border{
