@@ -1,0 +1,63 @@
+.informacoes {
+  width: 450px;
+  height: 320px;
+  display: flex;
+  margin-top: 2vw;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #225b3a;
+  border: 15 px solid #225b3a;
+  border-radius: 35px;
+  margin-bottom: 20px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.info {
+  text-align: center;
+}
+
+.border {
+  border: 15px solid red;
+  border-radius: 25px;
+  padding: 0px
+}
+
+.evento {
+  background-color: #fff;
+  border-radius: 2%;
+}
+
+.conteudo {
+  padding: 20px;
+}
+
+.formulario h2 {
+  margin-bottom: 20px;
+}
+
+.formulario label,
+.formulario input,
+.formulario a {
+  display: block;
+  border: 15 px solid #225b3a;
+  border-radius: 35px;
+  height: 20px;
+  width: 270px;
+}
+
+.formulario .botao {
+  margin: 0 auto;
+  width: 50%;
+  background: #FFC05A;
+}
+
+.cadastro {
+  text-align: center;
+}
+
+.cadastro a {
+  color: rgb(0, 140, 255);
+  text-decoration: underline;
+}
