@@ -1,49 +1,53 @@
 import Style from "./Login.module.css"
 import Header from "../header"
-import { useState, useSyncExternalStore } from "react";
-
+import { useState } from "react";
 
 function Login() {
+  const [isCadastro, setIsCadastro] = useState(false);
 
-  const [ecadastro, set_ecadastro] = useState(false);
-  const set_cadastro = (e) => {
-    set_ecadastro(true);
+  const toggleCadastro = () => {
+    setIsCadastro(!isCadastro);
   }
 
   return (
     <>
       <Header />
       <div className={Style.info}>
-        <h2>Entre em sua conta:</h2>
+        <h2>{isCadastro ? "Crie sua conta:" : "Entre em sua conta:"}</h2>
       </div>
       <div className={Style.informacoes}>
         <div className={Style.border}>
           <div className={Style.evento}>
             <div className={Style.conteudo}>
               <div className={Style.formulario}>
-
                 <form id="formao500" name="formao500" action="" method="post" style={{ textAlign: "center" }}>
-                  <label for="email">E-mail:</label><br />
-                  <input type="email" name="email" maxlength="100"
+                  <label htmlFor="email">E-mail:</label><br />
+                  <input type="email" name="email" maxLength="100"
                     placeholder="Digite seu e-mail"
                     required /><br /><br />
 
-                  <label for="senha">Senha:</label><br />
-                  <input type="password" name="senha" Maxlength="30"
+                  <label htmlFor="senha">Senha:</label><br />
+                  <input type="password" name="senha" maxLength="30"
                     placeholder="Digite sua senha"
                     required /><br /><br />
 
-                    {
-                      ecadastro && (<label for="senha">Senha:</label>)
-                    }
-                    {
-                      ecadastro && (<input type="password" name="senha" Maxlength="30" placeholder="Digite sua senha" required />)
-                    }
+                  {isCadastro && (
+                    <>
+                      <label htmlFor="confirmarSenha">Confirmar Senha:</label><br />
+                      <input type="password" name="confirmarSenha" maxLength="30"
+                        placeholder="Confirme sua senha"
+                        required /><br /><br />
+                    </>
+                  )}
 
-                  <input type="hidden" name="formulario_login" value={1} required />
-                  <input className={Style.botao} type="submit" name="botao" value="Logar" />
+                  <input type="hidden" name={isCadastro ? "formulario_cadastro" : "formulario_login"} value={1} required />
+                  <input className={Style.botao} type="submit" name="botao" value={isCadastro ? "Cadastrar" : "Logar"} />
                 </form>
-                <p className={Style.cadastro}>Ainda não tem uma conta? <span onClick={set_cadastro}>Cadastre-se aqui</span>.</p>
+                {isCadastro ? (
+                  <p className={Style.cadastro}>Já possui uma conta? <span onClick={toggleCadastro}>Faça Login</span>.</p>
+                ) : (
+                  <p className={Style.cadastro}>Ainda não tem uma conta? <span onClick={toggleCadastro}>Cadastre-se aqui</span>.</p>
+                )}
               </div>
             </div>
           </div>
@@ -51,8 +55,6 @@ function Login() {
       </div>
     </>
   );
-
 };
-
 
 export default Login;
