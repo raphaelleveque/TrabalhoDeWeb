@@ -20,7 +20,7 @@
 
 .evento{
     display: flex;
-    background-color: #fff;
+    background-color: var(--corFundo);
     border-radius: 10px;
     box-sizing: border-box;
     padding: 20px;
