@@ -42,24 +42,27 @@ const router = createBrowserRouter([
 ]);
 
 
+const increaseFont = () => {
+  const tamanhoAtual = parseFloat(getComputedStyle(document.documentElement).fontSize); 
+  document.documentElement.style.fontSize = (tamanhoAtual + 2) + 'px';
+};
+
+const decreaseFont = () => {
+  const tamanhoAtual = parseFloat(getComputedStyle(document.documentElement).fontSize); 
+  if(tamanhoAtual < 5) return;
+  document.documentElement.style.fontSize = (tamanhoAtual - 2) + 'px';
+};
+
 function App() {
 
   return (
     <>
-     <RouterProvider router={router}/>
-
-      {/* <img className="ufo" id="mascote1" src="src/visual/Nicolau (1).png" alt=""/>
-      <img className="ufo" id="mascote2"src="src/visual/Nicolau_Sino.png" alt=""/>
-      <img className="ufo" id="mascote3"src="src/visual/Natalina.png" alt=""/>
-      <img className="ufo" id="mascote4"src="src/visual/Floquinho (1).png" alt=""/>
-      <img className="ufo" id="mascote5" src="src/visual/Bell (2).png" alt=""/> */}
-
-    <img src={libras} id="Libras" />
+    <RouterProvider router={router}/>
 
     <footer>
       <p>Operação Natal ©2024</p>
       <div className="acessibilidade">
-        <p>A+ | A-</p>
+        <p><span onClick={increaseFont}>A+</span>  | <span onClick={decreaseFont}>A-</span></p>
         <img src={contrast} alt="" />
         <p>Alto Contraste</p>
       </div>
