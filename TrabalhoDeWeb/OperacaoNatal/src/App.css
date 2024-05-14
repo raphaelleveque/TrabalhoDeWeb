@@ -40,7 +40,7 @@ a {
 input,
 textarea {
   outline: none !important;
-  background-color: var(--corFundo);
+  background-color: #e1e0e0;
   border: none;
   border-radius: 8px;
   padding: .2em .4em;
@@ -332,6 +332,7 @@ footer p {
 }
 
 .high-contrast {
+    min-height: 100vh;
     --corFundo : #000;
     --corTexto : #fff;
     color: #fff;

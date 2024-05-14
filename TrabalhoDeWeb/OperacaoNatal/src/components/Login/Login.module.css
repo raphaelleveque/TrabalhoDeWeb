@@ -48,8 +48,6 @@
 .formulario input,
 .formulario a {
   display: block;
-  border: 15px solid #225b3a;
-  border-radius: 35px;
   height: 20px;
   width: 85%;
   margin: 0 auto;
