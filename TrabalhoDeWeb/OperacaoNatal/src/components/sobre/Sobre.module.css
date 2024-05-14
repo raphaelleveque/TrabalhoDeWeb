@@ -22,13 +22,11 @@
 
 .evento{
     display: flex;
-    background-color: #fff;
+    background-color: var(--corFundo);
     border-radius: 10px;
     flex-direction: column;
     justify-content: center;
-
 }
-
 .evento p{
     margin: 20px;
 }

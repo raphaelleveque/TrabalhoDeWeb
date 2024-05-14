@@ -59,7 +59,7 @@ function App() {
   };
 
   return (
-    <div className={highContrast ? 'high-contrast' : ''}>
+    <div className={highContrast ? 'high-contrast' : 'dafault-contrast'}>
       <RouterProvider router={router}/>
 
       <footer>
