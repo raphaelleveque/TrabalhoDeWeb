@@ -55,7 +55,7 @@
 }
 
 .evento ul li{
-    color:black;
+    color:var(--corTexto);
     font-size:1rem;
 }
 
