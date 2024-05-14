@@ -333,3 +333,13 @@ footer p {
   }
 
 }
+
+.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+.high-contrast a {
+  color: #0ff; /* Ajuste as cores dos links para serem visíveis no modo de alto contraste */
+}
+

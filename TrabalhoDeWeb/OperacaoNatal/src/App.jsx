@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -38,9 +38,7 @@ const router = createBrowserRouter([
     path: "/Login",
     element: <Login/>
   }
-
 ]);
-
 
 const increaseFont = () => {
   const tamanhoAtual = parseFloat(getComputedStyle(document.documentElement).fontSize); 
@@ -54,20 +52,25 @@ const decreaseFont = () => {
 };
 
 function App() {
+  const [highContrast, setHighContrast] = useState(false);
+
+  const toggleContrast = () => {
+    setHighContrast(!highContrast);
+  };
 
   return (
-    <>
-    <RouterProvider router={router}/>
+    <div className={highContrast ? 'high-contrast' : ''}>
+      <RouterProvider router={router}/>
 
-    <footer>
-      <p>Operação Natal ©2024</p>
-      <div className="acessibilidade">
-        <p><span onClick={increaseFont}>A+</span>  | <span onClick={decreaseFont}>A-</span></p>
-        <img src={contrast} alt="" />
-        <p>Alto Contraste</p>
-      </div>
-    </footer>
-    </>
+      <footer>
+        <p>Operação Natal ©2024</p>
+        <div className="acessibilidade">
+          <p><span onClick={increaseFont}>A+</span>  | <span onClick={decreaseFont}>A-</span></p>
+          <img src={contrast} alt="Alto Contraste" onClick={toggleContrast} style={{ cursor: 'pointer' }} />
+          <p>Alto Contraste</p>
+        </div>
+      </footer>
+    </div>
   )
 }
 
