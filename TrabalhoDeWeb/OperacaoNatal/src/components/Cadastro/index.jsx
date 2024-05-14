@@ -1,15 +1,8 @@
 import Style from "./Login.module.css"
 import Header from "../header"
-import { useState, useSyncExternalStore } from "react";
 
 
 function Login() {
-
-  const [ecadastro, set_ecadastro] = useState(false);
-  const set_cadastro = (e) => {
-    set_ecadastro(true);
-  }
-
   return (
     <>
       <Header />
@@ -33,17 +26,10 @@ function Login() {
                     placeholder="Digite sua senha"
                     required /><br /><br />
 
-                    {
-                      ecadastro && (<label for="senha">Senha:</label>)
-                    }
-                    {
-                      ecadastro && (<input type="password" name="senha" Maxlength="30" placeholder="Digite sua senha" required />)
-                    }
-
                   <input type="hidden" name="formulario_login" value={1} required />
                   <input className={Style.botao} type="submit" name="botao" value="Logar" />
                 </form>
-                <p className={Style.cadastro}>Ainda não tem uma conta? <span onClick={set_cadastro}>Cadastre-se aqui</span>.</p>
+                <p className={Style.cadastro}>Ainda não tem uma conta? <a href="">Cadastre-se aqui</a>.</p>
               </div>
             </div>
           </div>

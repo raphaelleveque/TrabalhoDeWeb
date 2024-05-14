@@ -82,11 +82,6 @@
   }
 }
 
-.formulario span {
-  color: blue;
-  cursor: pointer;
- }
-
 @media only screen and (max-width: 1000px) {
   .informacoes {
     width: 55vw;
