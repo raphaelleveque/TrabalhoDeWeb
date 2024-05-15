@@ -1,8 +1,8 @@
 import Header from "../header";
 import Style from "./home.module.css"
-import img1 from "../../assets/img1.png"
-import img2 from "../../assets/img2.jpg"
-import img3 from "../../assets/img3.jpg"
+import img1 from "../../assets/img1Home.jpg"
+import img2 from "../../assets/img2Home.jpg"
+import img3 from "../../assets/img3Home.png"
 
 
 const OperacaoNatal = () => {
@@ -19,8 +19,8 @@ const OperacaoNatal = () => {
 			<div className={Style.informacoes}>
 				<div className={Style.border}>
 					<div className={Style.carrossel}>
-						<img src={img1} alt="Equipe da operação natal com crianças"/>
 						<img src={img2} alt="Criança sendo maquiada por uma organizadora da Operação Natal"/>
+						<img src={img1} alt="Equipe da operação natal com crianças"/>
 						<img src={img3} alt="Papai Noel com crianças"/>
 					</div>
 				</div>

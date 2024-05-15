@@ -68,23 +68,24 @@ nav .blobLog img:nth-child(1),
 nav .blobLog img:nth-child(2) {
   display: block;
   height: 895px;
-  position: absolute;
-  z-index: 0;
+  position: fixed;
+  z-index: 9;
   left: -441px;
   top: -472px;
 }
 
 nav .blobLog img:nth-child(1) {
-  z-index: 1;
+  z-index: 10;
   height: 870px;
 }
 
-nav .blobLog img:nth-child(3) {
+
+nav .blobLog img:nth-child(3), nav .blobLog img:nth-child(4) {
   width: 150px;
   left: 1rem;
   top: 1rem;
-  position: absolute;
-  z-index: 2;
+  position: fixed;
+  z-index: 11;
 }
 
 .items {
@@ -93,23 +94,27 @@ nav .blobLog img:nth-child(3) {
 }
 
 .items img:nth-child(1) {
-  position: absolute;
+  position: fixed;
   width: 1539px;
   top: -43vh;
   transform: rotate3d(8, -102, 8, 168deg);
   height: 859px;
-  z-index: -1;
+  z-index: 10;
+}
+
+.high-contrast .items img:nth-child(1){
+  display: none;
 }
 
 .items img:nth-child(2) {
-  position: absolute;
+  position: fixed;
   width: 155px;
   right: 0;
   top: 5rem;
 }
 
 .items ul {
-  position: absolute;
+  position: fixed;
   right: 10px;
   top: 1rem;
   display: flex;
@@ -340,6 +345,19 @@ footer p {
 }
 
 .high-contrast a {
-  color: #0ff; /* Ajuste as cores dos links para serem visíveis no modo de alto contraste */
+  color: #fff; /* Ajuste as cores dos links para serem visíveis no modo de alto contraste */
+  text-shadow: 1px 1px 2px #000;
+}
+.high-contrast #logo1 {
+  display: none;
+}
+.high-contrast #logo2 {
+  display: inherit;
 }
 
+#logo1 {
+  display: inherit;
+}
+#logo2 {
+  display: none;
+}

@@ -2,7 +2,8 @@ import bloob1 from '../../assets/visual/Bloob1.png'
 import bloobClaro from '../../assets/visual/Bloob1-claro.png'
 import bloob2 from '../../assets/visual/Bloob2.png'
 import estrelas from '../../assets/visual/Estrelas.png'
-import logo from '../../assets/visual/logo-vertical-detalhes-em-branco.png'
+import logo from '../../assets/visual/logoOpn.png'
+import logo2 from '../../assets/visual/logo-vertical-branco.png'
 import menu from '../../assets/visual/menu.png'
 
 
@@ -23,7 +24,8 @@ function Header(){
             <div className="blobLog">
                 <img src={bloob1} alt=""/>
                 <img src={bloobClaro} alt=""/>
-                <img src={logo} alt="Logo"/>
+                <img src={logo} id='logo1' alt="Logo"/>
+                <img src={logo2} id='logo2' alt="Logo"/>
             </div>
             <div className="items" >
                 <img src={bloob2} alt=""/>
