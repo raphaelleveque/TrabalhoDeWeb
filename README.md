@@ -8,7 +8,7 @@
 
 ## Rodando a aplicação
 
-A partir da raiz do projeto, localize a pasta TrabalhoDeWeb/OperacaoNatal e execute o comando abaixo para instalar os pacotes necessários:
+A partir da raiz do projeto, acesse a pasta OperacaoNatal e execute o comando abaixo para instalar os pacotes necessários:
 
 ```sh
 npm install
