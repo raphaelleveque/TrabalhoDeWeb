@@ -65,9 +65,9 @@ function App() {
 
       <head>
         <div className="acessibilidade">
-          <p><span onClick={increaseFont}>A+</span>  | <span onClick={decreaseFont}>A-</span></p>
+          <div><button onClick={increaseFont}>A+</button>  | <button onClick={decreaseFont}>A-</button></div>
           <img src={contrast} alt="Alto Contraste" onClick={toggleContrast} style={{ cursor: 'pointer' }} />
-          <p onClick={toggleContrast} style={{ cursor: 'pointer' }}>Alto Contraste</p>
+          <button onClick={toggleContrast} style={{ cursor: 'pointer' }}>Alto Contraste</button>
         </div>
       </head>
 

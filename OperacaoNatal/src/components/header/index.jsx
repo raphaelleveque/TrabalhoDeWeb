@@ -7,7 +7,7 @@ import logo2 from '../../assets/visual/logo-vertical-branco.png'
 import menu from '../../assets/visual/menu.png'
 
 
-import { Link, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 function Header(){
@@ -17,11 +17,12 @@ function Header(){
       setIsVisible(prevState => !prevState);
     };
     
+
     const navegar = useNavigate();
-    const clicklogo = ()=> {
+    const clicklogo = ()=> {        
         navegar('/Home')
     };
-
+    
     return(
         <>
         <img src={menu} className='sandwich' onClick={toggleVisibility}/> 
@@ -37,19 +38,19 @@ function Header(){
                 <img src={estrelas} alt=""/>
                 <ul>
                     <li className="item1">
-                        <Link to={'/Home'}>Home</Link>
+                        <NavLink to={'/Home'} className={({ isActive }) => isActive ? 'ativo' : ''}>Home</NavLink>
                     </li>
                     <li className="item2">
-                        <Link to={'/Sobre'}>Sobre</Link>
+                        <NavLink to={'/Sobre'} className={({ isActive }) => isActive ? 'ativo' : ''}>Sobre</NavLink>
                     </li>
                     <li className="item3">
-                        <Link to={'/Contribuicoes'}>Contribuições</Link>
+                        <NavLink to={'/Contribuicoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Contribuições</NavLink>
                     </li>
                     <li className="item4">
-                        <Link to={'/Informacoes'}>Informações</Link>
+                        <NavLink to={'/Informacoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Informações</NavLink>
                     </li>
                     <li className="item5">
-                        <Link to={'/Login'}>Login</Link>
+                        <NavLink to={'/Login'} className={({ isActive }) => isActive ? 'ativo' : ''}>Login</NavLink>
                     </li>
                 </ul>
             </div>

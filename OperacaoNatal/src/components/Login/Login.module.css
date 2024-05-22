@@ -25,6 +25,7 @@
   z-index: 11;
 }
 
+
 .border {
   border: 25px solid red;
   border-radius: 25px;
@@ -51,12 +52,14 @@
   height: 20px;
   width: 85%;
   margin: 0 auto;
+  font-size: 1.2rem;
 }
 
 .formulario .botao {
   margin: 0 auto;
   width: 50%;
   background: #FFC05A;
+  height: auto;
 }
 
 .cadastro {

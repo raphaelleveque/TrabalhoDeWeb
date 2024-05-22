@@ -23,6 +23,7 @@ p, a, span, li {
 
 html,
 body {
+  font-size: 16px;
   height: 100vh;
 }
 
@@ -85,12 +86,12 @@ nav .blobLog img:nth-child(1) {
 
 
 nav .blobLog img:nth-child(3),
-nav .blobLog img:nth-child(4) {
+nav .blobLog img:nth-child(4){
   width: 150px;
   left: 1rem;
   top: 1rem;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 
 .items {
@@ -163,10 +164,6 @@ ul>li a {
   margin: 0;
 }
 
-head p {
-  margin: 0;
-}
-
 #Libras {
   position: fixed;
   right: 2vw;
@@ -209,14 +206,16 @@ head .acessibilidade img {
   margin: 0 10px;
 }
 
-.acessibilidade p {
+.acessibilidade button{
   cursor: pointer;
+  background: none;
+  border: none;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1rem;
+  color: (var(--corTexto));
 }
 
-head p, head p span{
-  margin: 0;
-  font-size: 14px;
-}
 
 .sandwich {
   display: none;
@@ -231,18 +230,14 @@ head p, head p span{
 
 @media only screen and (max-width: 1368px) {
 
-  #Conteudo {
-    margin-top: 20vh;
-  }
-
   #Conteudo .intro {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 0px;
   }
 
   #Conteudo p,
   #Conteudo li {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   html {
@@ -251,7 +246,7 @@ head p, head p span{
   }
 
   .items ul {
-    position: fixed;
+    position: relative;
     font-size: 2rem;
   }
 
@@ -259,7 +254,8 @@ head p, head p span{
     font-size: 2rem;
   }
 
-  nav .blobLog img:nth-child(3) {
+  nav .blobLog img:nth-child(3) ,
+  nav .blobLog img:nth-child(4){
     position: fixed;
   }
 
@@ -281,12 +277,12 @@ head p, head p span{
     margin-bottom: 20px;
   }
 
-  head {
+  .acessibilidade button{
     color: #000;
     
   }
 
-  .high-contrast head {
+  .high-contrast .acessibilidade button{
     color:white
   }
 
@@ -300,7 +296,8 @@ head p, head p span{
     margin-bottom: 20px;
   }
 
-  nav .blobLog img:nth-child(3) {
+  nav .blobLog img:nth-child(3) ,
+  nav .blobLog img:nth-child(4){
     width: 20vw;
     position: relative;
   }
@@ -311,7 +308,7 @@ head p, head p span{
     margin: 4px;
     margin-top: 30px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     right: 10px;
     z-index: 999;
   }
@@ -383,7 +380,7 @@ head p, head p span{
 
 }
 
-.dafault-contrast {
+.default-contrast {
   --corFundo: #fff;
   --corTexto: #000;
 }
@@ -418,4 +415,8 @@ head p, head p span{
 #logo2 {
   display: none;
   cursor: pointer;
+}
+
+.ativo{
+  text-decoration: underline!important;
 }
