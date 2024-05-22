@@ -17,6 +17,10 @@ body {
   -webkit-user-drag: none;
 }
 
+p, a, span, li {
+  line-height: 2rem;
+}
+
 html,
 body {
   height: 100vh;
