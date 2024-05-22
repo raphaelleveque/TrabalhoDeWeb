@@ -61,7 +61,7 @@ function App() {
   };
 
   return (
-    <div className={highContrast ? 'high-contrast' : 'dafault-contrast'}>
+    <div className={highContrast ? 'high-contrast' : 'default-contrast'}>
 
       <head>
         <div className="acessibilidade">

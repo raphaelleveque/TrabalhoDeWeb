@@ -283,9 +283,14 @@ head p, head p span{
 
   head {
     color: #000;
+    
   }
 
-  head img {
+  .high-contrast head {
+    color:white
+  }
+
+  .default-contrast head img {
     filter:invert(1)
   }
 
@@ -309,6 +314,9 @@ head p, head p span{
     position: fixed;
     right: 10px;
     z-index: 999;
+  }
+  .high-contrast .sandwich {
+    filter:invert(1)
   }
 
   .items img {
@@ -404,8 +412,10 @@ head p, head p span{
 
 #logo1 {
   display: inherit;
+  cursor: pointer;
 }
 
 #logo2 {
   display: none;
+  cursor: pointer;
 }

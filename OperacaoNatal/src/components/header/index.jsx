@@ -7,7 +7,7 @@ import logo2 from '../../assets/visual/logo-vertical-branco.png'
 import menu from '../../assets/visual/menu.png'
 
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 function Header(){
@@ -17,6 +17,11 @@ function Header(){
       setIsVisible(prevState => !prevState);
     };
     
+    const navegar = useNavigate();
+    const clicklogo = ()=> {
+        navegar('/Home')
+    };
+
     return(
         <>
         <img src={menu} className='sandwich' onClick={toggleVisibility}/> 
@@ -24,8 +29,8 @@ function Header(){
             <div className="blobLog">
                 <img src={bloob1} alt=""/>
                 <img src={bloobClaro} alt=""/>
-                <img src={logo} id='logo1' alt="Logo"/>
-                <img src={logo2} id='logo2' alt="Logo"/>
+                <img onClick={clicklogo} src={logo} id='logo1' alt="Logo"/>
+                <img onClick={clicklogo} src={logo2} id='logo2' alt="Logo"/>
             </div>
             <div className="items" >
                 <img src={bloob2} alt=""/>
