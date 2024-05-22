@@ -5,6 +5,8 @@
 **Alunos**:
   - Lucas Pereira Pacheco | 12543930
   - Henrique Bovo | 12542539
+  - Raphael Leveque | 12542522
+  - João Pedro Duarte Nunes | 12542460
 
 ## Sobre o projeto
 
