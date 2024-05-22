@@ -1,6 +1,5 @@
 .informacoes {
   width: 35vw;
-  height: 400px;
   display: flex;
   margin-top: 2vw;
   justify-content: center;
@@ -37,7 +36,7 @@
 }
 
 .conteudo {
-  padding: 20px;
+  padding: 2vh 1vw;
 }
 
 .formulario h2 {
@@ -63,7 +62,9 @@
   text-align: center;
 }
 
-.cadastro a {
+.cadastro button {
+  background: none;
+  border: none;
   color: rgb(0, 140, 255);
   text-decoration: underline;
 }
@@ -71,7 +72,6 @@
 @media only screen and (max-width: 1280px) {
   .informacoes {
     width: 35vw;
-    height: 320px;
   }
 
   .info {
@@ -83,12 +83,11 @@
 .formulario span {
   color: blue;
   cursor: pointer;
- }
+}
 
 @media only screen and (max-width: 1000px) {
   .informacoes {
     width: 55vw;
-    height: 320px;
   }
 
   .info {

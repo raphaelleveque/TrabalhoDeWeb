@@ -44,9 +44,15 @@ function Login() {
                   <input className={Style.botao} type="submit" name="botao" value={isCadastro ? "Cadastrar" : "Logar"} />
                 </form>
                 {isCadastro ? (
-                  <p className={Style.cadastro}>Já possui uma conta? <span onClick={toggleCadastro}>Faça Login</span>.</p>
+                  <p className={Style.cadastro}>
+                    Já possui uma conta?
+                    <button onClick={toggleCadastro} tabIndex="0" className={Style.toggleButton}>Faça Login</button>.
+                  </p>
                 ) : (
-                  <p className={Style.cadastro}>Ainda não tem uma conta? <span onClick={toggleCadastro}>Cadastre-se aqui</span>.</p>
+                  <p className={Style.cadastro}>
+                    Ainda não tem uma conta?
+                    <button onClick={toggleCadastro} tabIndex="0" className={Style.toggleButton}>Cadastre-se aqui</button>.
+                  </p>
                 )}
               </div>
             </div>
