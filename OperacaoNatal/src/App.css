@@ -104,7 +104,7 @@ nav .blobLog img:nth-child(4) {
   top: -43vh;
   transform: rotate3d(8, -102, 8, 168deg);
   height: 859px;
-  z-index: -1;
+  z-index: 11;
 }
 
 .high-contrast .items img:nth-child(1) {
@@ -225,10 +225,15 @@ head p, head p span{
 @media only screen and (max-width: 1600px) {
   .items img:nth-child(1) {
     transform: rotate3d(14, -102, 8, 168deg);
+    z-index: 11;
   }
 }
 
 @media only screen and (max-width: 1368px) {
+
+  #Conteudo {
+    margin-top: 20vh;
+  }
 
   #Conteudo .intro {
     font-size: 1.5rem;
@@ -255,7 +260,7 @@ head p, head p span{
   }
 
   nav .blobLog img:nth-child(3) {
-    position: relative;
+    position: fixed;
   }
 
   nav {
@@ -292,6 +297,7 @@ head p, head p span{
 
   nav .blobLog img:nth-child(3) {
     width: 20vw;
+    position: relative;
   }
 
   .sandwich {
