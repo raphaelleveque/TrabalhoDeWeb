@@ -100,7 +100,7 @@ nav .blobLog img:nth-child(4) {
   top: -43vh;
   transform: rotate3d(8, -102, 8, 168deg);
   height: 859px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .high-contrast .items img:nth-child(1) {
@@ -218,7 +218,13 @@ footer p {
   display: none;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1600px) {
+  .items img:nth-child(1) {
+    transform: rotate3d(14, -102, 8, 168deg);
+  }
+}
+
+@media only screen and (max-width: 1368px) {
 
   #Conteudo .intro {
     font-size: 1.5rem;
@@ -236,7 +242,7 @@ footer p {
   }
 
   .items ul {
-    position: inherit;
+    position: fixed;
     font-size: 2rem;
   }
 
@@ -319,6 +325,15 @@ footer p {
   }
 
 }
+
+@media only screen and (max-width: 768px) {
+  .nav-hidden .items {
+    display: none;
+    margin-top: -27vh;
+    margin-bottom: 20px;
+  }
+}
+
 
 @media only screen and (max-width: 576px) {
   .items {
