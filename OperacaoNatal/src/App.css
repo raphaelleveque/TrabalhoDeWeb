@@ -159,7 +159,7 @@ ul>li a {
   margin: 0;
 }
 
-footer p {
+head p {
   margin: 0;
 }
 
@@ -182,25 +182,24 @@ footer p {
   scale: 0.95;
 }
 
-footer {
-  background: #000;
+head {
   color: #fff;
-  margin-bottom: 0;
+  margin-top: 0;
   font-family: "Pompiere";
   height: 25px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
   z-index: 99;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 
-footer .acessibilidade {
+head .acessibilidade {
   display: flex;
 }
 
-footer .acessibilidade img {
+head .acessibilidade img {
   height: 1.2rem;
   cursor: pointer;
   margin: 0 10px;
@@ -210,8 +209,9 @@ footer .acessibilidade img {
   cursor: pointer;
 }
 
-footer p {
+head p, head p span{
   margin: 0;
+  font-size: 14px;
 }
 
 .sandwich {
@@ -272,6 +272,14 @@ footer p {
     margin-bottom: 20px;
   }
 
+  head {
+    color: #000;
+  }
+
+  head img {
+    filter:invert(1)
+  }
+
   .nav-visible {
     display: flex;
     margin-top: 0;
@@ -286,6 +294,7 @@ footer p {
     display: inherit;
     width: 6vw;
     margin: 4px;
+    margin-top: 30px;
     cursor: pointer;
     position: fixed;
     right: 10px;
@@ -339,6 +348,7 @@ footer p {
   .items {
     width: 90vw;
   }
+
 
   html {
     font-size: 10px;

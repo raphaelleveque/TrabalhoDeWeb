@@ -13,6 +13,8 @@ import libras from "./assets/visual/libras.png"
 import contrast from "./assets/visual/contraste.png"
 import Login from "./components/Login";
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -60,16 +62,17 @@ function App() {
 
   return (
     <div className={highContrast ? 'high-contrast' : 'dafault-contrast'}>
-      <RouterProvider router={router}/>
 
-      <footer>
-        <p>Operação Natal ©2024</p>
+      <head>
         <div className="acessibilidade">
           <p><span onClick={increaseFont}>A+</span>  | <span onClick={decreaseFont}>A-</span></p>
           <img src={contrast} alt="Alto Contraste" onClick={toggleContrast} style={{ cursor: 'pointer' }} />
           <p onClick={toggleContrast} style={{ cursor: 'pointer' }}>Alto Contraste</p>
         </div>
-      </footer>
+      </head>
+
+
+      <RouterProvider router={router}/>
     </div>
   )
 }
