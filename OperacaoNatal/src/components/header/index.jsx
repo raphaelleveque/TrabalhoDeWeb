@@ -38,19 +38,19 @@ function Header(){
                 <img src={estrelas} alt=""/>
                 <ul>
                     <li className="item1">
-                        <NavLink to={'/Home'} className={({ isActive }) => isActive ? 'ativo' : ''}>Home</NavLink>
+                        <NavLink role="navigation" aria-label="Home" to={'/Home'} className={({ isActive }) => isActive ? 'ativo' : ''}>Home</NavLink>
                     </li>
                     <li className="item2">
-                        <NavLink to={'/Sobre'} className={({ isActive }) => isActive ? 'ativo' : ''}>Sobre</NavLink>
+                        <NavLink role="navigation" aria-label="Sobre" to={'/Sobre'} className={({ isActive }) => isActive ? 'ativo' : ''}>Sobre</NavLink>
                     </li>
                     <li className="item3">
-                        <NavLink to={'/Contribuicoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Contribuições</NavLink>
+                        <NavLink role="navigation" aria-label="Contribuições" to={'/Contribuicoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Contribuições</NavLink>
                     </li>
                     <li className="item4">
-                        <NavLink to={'/Informacoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Informações</NavLink>
+                        <NavLink role="navigation" aria-label="Informações" to={'/Informacoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Informações</NavLink>
                     </li>
                     <li className="item5">
-                        <NavLink to={'/Login'} className={({ isActive }) => isActive ? 'ativo' : ''}>Login</NavLink>
+                        <NavLink role="navigation" aria-label="Login" to={'/Login'} className={({ isActive }) => isActive ? 'ativo' : ''}>Login</NavLink>
                     </li>
                 </ul>
             </div>
