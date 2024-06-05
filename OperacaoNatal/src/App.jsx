@@ -65,9 +65,9 @@ function App() {
 
       <head>
         <div className="acessibilidade">
-          <div><button onClick={increaseFont}>A+</button>  | <button onClick={decreaseFont}>A-</button></div>
+          <div><button aria-label="Aumentar tamanho da fonte" onClick={increaseFont}>A+</button>  | <button aria-label="Diminuir tamanho da fonte" onClick={decreaseFont}>A-</button></div>
           <img src={contrast} alt="Alto Contraste" onClick={toggleContrast} style={{ cursor: 'pointer' }} />
-          <button onClick={toggleContrast} style={{ cursor: 'pointer' }}>Alto Contraste</button>
+          <button role="switch" onClick={toggleContrast} style={{ cursor: 'pointer' }}>Alto Contraste</button>
         </div>
       </head>
 
