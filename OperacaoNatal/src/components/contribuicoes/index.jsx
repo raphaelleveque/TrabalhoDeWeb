@@ -33,10 +33,10 @@ function Contribuicoes() {
                                 <h4>Quer ir além?</h4>
                                 <article>Para contribuir com valores acima de R$ 60,00, por favor entre em contato com um dos seguintes canais:</article>
                                 <div>
-                                    <span>Email: </span><a className={Style.texto} href="mailto:proj.operacaonatal@gmail.com">proj.operacaonatal@gmail.com</a>
+                                    <span>Email: </span><a aria-label="Contato e-mail" className={Style.texto} href="mailto:proj.operacaonatal@gmail.com">proj.operacaonatal@gmail.com</a>
                                 </div>
                                 <div>
-                                    <span>WhatsApp: </span><a className={Style.texto} href="https://api.whatsapp.com/send?phone=5561982629810">+55 61 982629810</a>
+                                    <span>WhatsApp: </span><a aria-label="Contato whatsapp" className={Style.texto} href="https://api.whatsapp.com/send?phone=5561982629810">+55 61 982629810</a>
                                 </div>
                             </div>
                         </div>
