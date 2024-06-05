@@ -7,6 +7,7 @@
   - Henrique Bovo | 12542539
   - Raphael Leveque | 12542522
   - João Pedro Duarte Nunes | 12542460
+  - Mateus Israel Silva | 11735042
 
 ## Sobre o projeto
 
