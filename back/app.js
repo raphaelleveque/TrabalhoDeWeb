@@ -16,20 +16,6 @@ con.connect(function(err) {
     console.log("Banco ok!");
 });
 
-app.post('/executar-procedure', (req, res) => {
-    const nomeProcedure = 'minha_procedure';
-    const parametro1 = req.query.parametro1;
-    const parametro2 = req.query.parametro2;
-
-    db.query(CALL CriarUsuario(?, ?), [parametro1, parametro2], (err, result) => {
-        if (err) {
-            console.error('Erro ao executar a procedure:', err);
-            return res.status(500).send('Erro ao executar a procedure');
-        }
-        res.json(result);
-    });
-});
-
 
 app.post('/', (req,res) => {
 
@@ -62,6 +48,31 @@ app.post('/login', (req,res) => {
         res.json(result)
     })
 });
+
+
+app.post('/criaPostagem', (req,res) => {
+    var titulo, body, author, horario, img  = req.body
+
+    db.query(`INSERT INTO posts (?, ?, ?, ?) VALUES`, [titulo, body, author, horario, img], (err, result) => {
+        if (err) {
+            console.error('Erro ao executar a procedure:', err)
+            return res.status(500).send('Erro ao executar a procedure')
+        }
+        res.json(result)
+    })
+});
+
+app.get('/postagens', (req,res) => {
+
+    db.query(`SELECT TOP 15 * FROM posts `, (err, result) => {
+        if (err) {
+            console.error('Erro ao executar a procedure:', err)
+            return res.status(500).send('Erro ao executar a procedure')
+        }
+        res.json(result)
+    })
+});
+
 
 app.listen(3000, () => {
     console.log('Server rodando')
