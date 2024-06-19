@@ -7,7 +7,7 @@ import logo2 from '../../assets/visual/logo-vertical-branco.png'
 import menu from '../../assets/visual/menu.png'
 
 
-import { NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 function Header(){
