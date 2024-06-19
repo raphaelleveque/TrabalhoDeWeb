@@ -51,7 +51,17 @@ app.post('/CriaUsuario', (req,res) => {
     })
 });
 
+app.post('/login', (req,res) => {
+    var email, senha = req.body
 
+    db.query("CALL LoginUsuario(?, ?)", [senha, email], (err, result) => {
+        if (err) {
+            console.error('Erro ao executar a procedure:', err)
+            return res.status(500).send('Erro ao executar a procedure')
+        }
+        res.json(result)
+    })
+});
 
 app.listen(3000, () => {
     console.log('Server rodando')
