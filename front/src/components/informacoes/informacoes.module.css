@@ -28,8 +28,11 @@
 
 .evento img {
     width: 350px;
+    max-width: 100%;
+    height: auto; 
     border-radius: 10px;
     background-color: #EC0719;
+    object-fit: cover;
 }
 
 .evento .conteudo {
