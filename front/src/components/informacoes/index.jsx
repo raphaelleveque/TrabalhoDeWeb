@@ -4,8 +4,43 @@ import img2 from "../../assets/img2.jpg"
 import img3 from "../../assets/img3.jpg"
 
 import Header from "../header"
+import { useState, useEffect } from "react"
 
 function Informacoes() {
+  const [posts, setPosts] = useState([]);
+
+  const successCb = (data) => {
+    setPosts(data);
+  };
+
+  const errorCb = (error) => {
+    console.log(error);
+  };
+
+  useEffect(() => {
+    handleGetBlogPosts();
+  }, []);
+
+  const handleGetBlogPosts = async () => {
+    const posts = await fetch(`http://127.0.0.1:3000/postagens`, {
+      method: "GET"
+    });
+
+    const data = await posts.json();
+
+    if (posts.status === 200) {
+      successCb(data);
+      return;
+    }
+
+    if (posts.status === 500) {
+      console.log("Erro ao carregar as postagens.");
+      return;
+    }
+
+    errorCb(data);
+  }
+
   return (
     <>
       <Header />
@@ -15,40 +50,19 @@ function Informacoes() {
           <h2>Informações</h2>
           <h3>Fique Antenado nos próximos eventos!</h3>
         </div>
-
         <div className={Style.informacoes}>
-          <div className={Style.border}>
-            <div className={Style.evento}>
-              <img src={img1} alt="Equipe da operação natal com crianças" />
-              <div className={Style.conteudo}>
-                <h4>Dia D</h4>
-                <article>Dia D é o evento em que reunimos o máximo de pessoas para irmos às ruas para arrecadar doações que serão distruidas para uma série de instiuições que precisem desse auxílio.</article>
-                <button>Saiba mais</button>
+          {posts.map((post) => (
+            <div className={Style.border}>
+              <div className={Style.evento}>
+                <img src={post.img} alt={post.title} />
+                <div className={Style.conteudo}>
+                  <h4>{post.title}</h4>
+                  <article>{post.body}</article>
+                  <button>Saiba mais</button>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className={Style.border}>
-            <div className={Style.evento}>
-              <img src={img2} alt="Criança sendo maquiada por uma organizadora da Operação Natal" />
-              <div className={Style.conteudo}>
-                <h4>Festinha divina providência</h4>
-                <article>Divina providência é uma creche que trabalhamos na qual arrecadamos sacolinhas para os alunos e distribuimos nas festinhas juntamente de um evento recheado de brincadeiras e interações com os pequenos.</article>
-                <button>Saiba mais</button>
-              </div>
-            </div>
-          </div>
-
-          <div className={Style.border}>
-            <div className={Style.evento}>
-              <img src={img3} alt="Papai Noel com crianças" />
-              <div className={Style.conteudo}>
-                <h4>Festinha Doces Flautistas</h4>
-                <article>Doces flautistas é um projeto social que visa transformação social através da música. Nas festinhas, realizamos as doações das sacolinhas arrecadas e realizamos o evento recreativo com elas!</article>
-                <button>Saiba mais</button>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
