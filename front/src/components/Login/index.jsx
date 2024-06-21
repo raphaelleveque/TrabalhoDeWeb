@@ -2,7 +2,8 @@ import Style from "./Login.module.css"
 import Header from "../header"
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
-
+import toastr from "toastr"
+import jsCookies from "js-cookies"
 
 function Login() {
 
@@ -19,27 +20,29 @@ function Login() {
 
   const successCb = (user) => {
     console.log(user);
-
+    jsCookies.setItem("user", usrLogin);
+    toastr.success("Login realizado com sucesso");
+    navigate("/")
   };
 
-  const errorCb = (error) => {
-    console.log(error);
+  const errorCb = () => {
+    toastr.error("Erro ao realizar login");
   };
 
   const handleCadastro = async () => {
     if (password != confirmPassword) {
-      console.log("Senhas devem coincidir!");
+      toastr.info("Senhas devem coincidir!");
       return;
     }
 
     const user = {
-      login: usrLogin,
-      password: password,
+      email: usrLogin,
+      senha: password,
     };
 
     console.log(user)
 
-    const cadastro = await fetch('http://127.0.0.1:3000/login', {
+    const cadastro = await fetch('http://localhost:3000/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,9 +50,10 @@ function Login() {
       body: JSON.stringify(user),
     });
 
-    const data = await cadastro.json();
 
     if (cadastro.status === 200) {
+      const data = await cadastro.json();
+
       successCb(data);
       return;
     }
@@ -59,7 +63,6 @@ function Login() {
       return;
     }
 
-    errorCb(data);
   };
 
   const handleLogin = async () => {
@@ -70,28 +73,34 @@ function Login() {
 
     console.log(user)
 
-    const login = await fetch(`http://127.0.0.1:3000/login?login=${user.login}&password=${user.password}`, {
-      method: "GET"
+    const login = await fetch(`http://localhost:3000/login?email=${usrLogin}&senha=${password}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
-    const data = await login.json();
-
     if (login.status === 200) {
+      const data = await login.json();
       successCb(data);
       return;
     }
 
     if (login.status === 401) {
-      toastr.warning("Login inválido!");
+      toastr.info("Login inválido!");
       return;
     }
 
-    errorCb(data);
+    errorCb();
   };
 
-  const handleAction = async () => {
-    if (isCadastro) handleCadastro()
-    else handleLogin()
+  const handleAction =  () => {
+    if (isCadastro){
+      handleCadastro();
+      return;
+    }
+
+    handleLogin()
   }
 
   return (
@@ -106,12 +115,12 @@ function Login() {
           <div className={Style.evento}>
             <div className={Style.conteudo}>
               <div className={Style.formulario}>
-                <label htmlFor="email">E-mail:</label><br />
+                <label htmlFor="email">Usuário:</label><br />
                 <input
                   type="email"
                   name="email"
                   maxLength="100"
-                  placeholder="Digite seu e-mail"
+                  placeholder="Digite seu UserName"
                   onChange={(e) => setusrLogin(e.target.value)}
                   value={usrLogin}
                   onKeyDown={e => { e.key === 'Enter' && handleAction() }}

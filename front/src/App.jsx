@@ -4,16 +4,24 @@ import {
   RouterProvider,
   Link
 } from "react-router-dom"
+import toastr from 'toastr';
 import Informacoes from './components/informacoes'
 import Home from './components/home'
 import Sobre from "./components/sobre";
 import Contribuicoes from "./components/contribuicoes";
 import './App.css'
-import libras from "./assets/visual/libras.png"
 import contrast from "./assets/visual/contraste.png"
 import Login from "./components/Login";
 
-
+toastr.options = {
+  positionClass: 'toast-bottom-left',  // Define a posição padrão como inferior esquerda
+  closeButton: true,
+  progressBar: true,
+  timeOut: 5000,  // Define o tempo de exibição padrão do toast
+  extendedTimeOut: 1000,
+  hideMethod: 'fadeOut',
+  showMethod: 'fadeIn',
+};
 
 const router = createBrowserRouter([
   {

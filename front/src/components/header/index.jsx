@@ -5,18 +5,25 @@ import estrelas from '../../assets/visual/Estrelas.png'
 import logo from '../../assets/visual/logoOpn.png'
 import logo2 from '../../assets/visual/logo-vertical-branco.png'
 import menu from '../../assets/visual/menu.png'
-
+import jsCookie from "js-cookies"
 
 import { NavLink, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Header(){
     const [isVisible, setIsVisible] = useState(false);
+    const [loginName, setLoginName] = useState("");
 
     const toggleVisibility = () => {
       setIsVisible(prevState => !prevState);
     };
     
+    useEffect(()=>{
+        if(jsCookie.hasItem("user"))
+            setLoginName(jsCookie.getItem("user"))
+        else
+            setLoginName("Login")
+    },[])
 
     const navegar = useNavigate();
     const clicklogo = ()=> {        
@@ -50,7 +57,7 @@ function Header(){
                         <NavLink role="navigation" aria-label="Informações" to={'/Informacoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Informações</NavLink>
                     </li>
                     <li className="item5">
-                        <NavLink role="navigation" aria-label="Login" to={'/Login'} className={({ isActive }) => isActive ? 'ativo' : ''}>Login</NavLink>
+                        <NavLink role="navigation" aria-label="Login" to={'/Login'} className={({ isActive }) => isActive ? 'ativo' : ''}>{loginName}</NavLink>
                     </li>
                 </ul>
             </div>

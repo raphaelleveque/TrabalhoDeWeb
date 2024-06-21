@@ -69,7 +69,6 @@ app.post('/postagens', validarToken, (req, res) => {
     if (!titulo || !body || !author) {
         return res.status(400).send('Título, corpo e autor são obrigatórios');
     }
-
     const query = 'INSERT INTO posts (titulo, body, author, img) VALUES (?, ?, ?, ?)';
     const values = [titulo, body, author, img];
 
@@ -79,8 +78,9 @@ app.post('/postagens', validarToken, (req, res) => {
             return res.status(500).send('Erro ao inserir o post');
         }
 
-        res.status(201);
+        res.status(201).send();
     });
+
 });
 
 app.get('/postagens', (req,res) => {

@@ -22,7 +22,7 @@ function Informacoes() {
   }, []);
 
   const handleGetBlogPosts = async () => {
-    const posts = await fetch(`http://127.0.0.1:3000/postagens`, {
+    const posts = await fetch(`http://localhost:3000/postagens`, {
       method: "GET"
     });
 
@@ -54,11 +54,10 @@ function Informacoes() {
           {posts.map((post) => (
             <div className={Style.border}>
               <div className={Style.evento}>
-                <img src={post.img} alt={post.title} />
+                <img src={post.img ?? img1} alt={post.titulo} />
                 <div className={Style.conteudo}>
-                  <h4>{post.title}</h4>
+                  <h4>{post.titulo}</h4>
                   <article>{post.body}</article>
-                  <button>Saiba mais</button>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 CREATE TABLE posts (
-    titulo VARCHAR(255) NOT NULL,
+    titulo VARCHAR(255) NOT NULL PRIMARY KEY,
     body TEXT NOT NULL,
     author VARCHAR(100) NOT NULL,
     horario TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -7,7 +7,7 @@ CREATE TABLE posts (
 );
 
 CREATE TABLE login (
-    email VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL PRIMARY KEY,
     password_hash VARCHAR(255) NOT NULL,
     access_token VARCHAR(255)
 );
