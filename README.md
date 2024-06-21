@@ -15,7 +15,7 @@ O site desenvolvido tem o objetivo de servir como plataforma de divulgação sob
 
 ## Estrutura do site
 
-O site está organizado atualmente em 6 abas, sendo elas Home, Sobre, Contribuições, Informações, Login e Cadastro.
+O site está organizado atualmente em 5 abas, sendo elas Home, Sobre, Contribuições, Informações e Login, que contém também a tela de Cadastro.
 
 ## Estrutura dos arquivos
 
