@@ -42,7 +42,7 @@ function Login() {
 
     console.log(user)
 
-    const cadastro = await fetch('http://localhost:3000/login', {
+    const cadastro = await fetch('http:/operacaonatal.com.br/api/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -73,7 +73,7 @@ function Login() {
 
     console.log(user)
 
-    const login = await fetch(`http://localhost:3000/login?email=${usrLogin}&senha=${password}`, {
+    const login = await fetch(`http://operacaonatal.com.br/api/login?email=${usrLogin}&senha=${password}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

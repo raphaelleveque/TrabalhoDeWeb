@@ -2,15 +2,18 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require('mysql');
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 const app = express();
 app.use(cors());
 app.use(express.json())
 
 var db = mysql.createConnection({
-    host: "localhost",
-    user: "webClient",
-    password: "Senh@123",
-    database: "web"
+    host: "127.0.0.1",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 });
 
 db.connect(function(err) {
@@ -95,7 +98,7 @@ app.get('/postagens', (req,res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(process.env.SRV_PORT, () => {
     console.log('Server rodando')
 });
 

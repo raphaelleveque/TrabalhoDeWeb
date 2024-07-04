@@ -22,7 +22,7 @@ function Informacoes() {
   }, []);
 
   const handleGetBlogPosts = async () => {
-    const posts = await fetch(`http://localhost:3000/postagens`, {
+    const posts = await fetch(`http://operacaonatal.com.br/postagens`, {
       method: "GET"
     });
 
