@@ -56,9 +56,6 @@ function Header(){
                     <li className="item4">
                         <NavLink role="navigation" aria-label="Informações" to={'/Informacoes'} className={({ isActive }) => isActive ? 'ativo' : ''}>Informações</NavLink>
                     </li>
-                    <li className="item5">
-                        <NavLink role="navigation" aria-label="Login" to={'/Login'} className={({ isActive }) => isActive ? 'ativo' : ''}>{loginName}</NavLink>
-                    </li>
                 </ul>
             </div>
         </nav>

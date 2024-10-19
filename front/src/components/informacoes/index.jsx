@@ -1,45 +1,31 @@
 import Style from "./informacoes.module.css"
 import img1 from "../../assets/img1.png"
-import img2 from "../../assets/img2.jpg"
-import img3 from "../../assets/img3.jpg"
 
 import Header from "../header"
 import { useState, useEffect } from "react"
 
 function Informacoes() {
-  const [posts, setPosts] = useState([]);
+ 
+  const [posts, setContent] = useState(null);
+	const strapiUrl = 'http://localhost:1337/'
 
-  const successCb = (data) => {
-    setPosts(data);
-  };
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await fetch('http://localhost:1337/api/Postagems?populate=*'); 
+				const data = await response.json();
+				setContent(data.data);
+			} catch (error) {
+				console.error('Erro ao carregar dados', error);
+			}
+		};
 
-  const errorCb = (error) => {
-    console.log(error);
-  };
+		fetchData();
+	}, []);
 
-  useEffect(() => {
-    handleGetBlogPosts();
-  }, []);
-
-  const handleGetBlogPosts = async () => {
-    const posts = await fetch(`http://operacaonatal.com.br/postagens`, {
-      method: "GET"
-    });
-
-    const data = await posts.json();
-
-    if (posts.status === 200) {
-      successCb(data);
-      return;
-    }
-
-    if (posts.status === 500) {
-      console.log("Erro ao carregar as postagens.");
-      return;
-    }
-
-    errorCb(data);
-  }
+	if (!posts) {
+		return <p>Carregando...</p>; 
+	}
 
   return (
     <>
@@ -54,10 +40,10 @@ function Informacoes() {
           {posts.map((post) => (
             <div className={Style.border}>
               <div className={Style.evento}>
-                <img src={post.img ?? img1} alt={post.titulo} />
+                <img src={strapiUrl + post.Imagem.url} alt={post.Titulo} />
                 <div className={Style.conteudo}>
-                  <h4>{post.titulo}</h4>
-                  <article>{post.body}</article>
+                  <h4>{post.Titulo}</h4>
+                  <article>{post.Conteudo}</article>
                 </div>
               </div>
             </div>

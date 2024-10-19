@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": "Write about yourself and the content you create"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TituloPrincipal": {
+      "type": "string"
+    },
+    "Subtitulo": {
+      "type": "string"
+    },
+    "ConteudoTexto": {
+      "type": "text"
+    },
+    "Imagens": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}
